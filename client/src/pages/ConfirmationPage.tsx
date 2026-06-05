@@ -81,8 +81,8 @@ export default function ConfirmationPage() {
                 <div className="flex flex-col gap-2">
                   {[
                     { icon: <Calendar size={15} />, text: '17 JUIN 2026' },
-                    { icon: <Clock size={15} />, text: '15h – 21h' },
-                    { icon: <MapPin size={15} />, text: 'Immeuble KRYSTAL PALACE, Rez-de-chaussée, Rue Dubois de Saligny, Douala' },
+                    { icon: <Clock size={15} />, text: '08h30 – 13h' },
+                    { icon: <MapPin size={15} />, text: 'KRYSTAL PALACE, Douala' },
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-2 text-blue-200 text-sm">
                       <span style={{ color: '#39A5DE' }}>{item.icon}</span>
