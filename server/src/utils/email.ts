@@ -104,7 +104,7 @@ export async function sendConfirmationEmail(
         </tr>
       </table>
       <h1 style="margin:0 0 12px 0;font-family:Arial, sans-serif;color:#1E4D72;font-size:20px;line-height:1.3;">Bonjour ${data.prenom} !</h1>
-      <p style="margin:0 0 12px 0;font-family:Arial, sans-serif;color:#475569;font-size:14px;line-height:1.6;">Votre participation au <strong>LANCEMENT OFFICIEL DE SETECT</strong> a bien été confirmée.</p>
+      <p style="margin:0 0 12px 0;font-family:Arial, sans-serif;color:#475569;font-size:14px;line-height:1.6;">Votre participation au <strong>EVENEMENT KASPERKSY QUANTUM SETECT</strong> a bien été confirmée.</p>
       <p style="margin:0 0 16px 0;font-family:Arial, sans-serif;color:#475569;font-size:14px;line-height:1.6;">Nous sommes ravis de vous accueillir pour cette soiree de lancement</p>
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f8fafc;border-radius:8px;">
         <tr>
@@ -143,15 +143,15 @@ export async function sendConfirmationEmail(
         </tr>
       </table>
       <h1 style="margin:0 0 12px 0;font-family:Arial, sans-serif;color:#1E4D72;font-size:20px;line-height:1.3;">Bonjour ${data.prenom},</h1>
-      <p style="margin:0 0 12px 0;font-family:Arial, sans-serif;color:#475569;font-size:14px;line-height:1.6;">Nous avons bien pris note de votre absence à l'événement <strong>SETECT LANCEMENT OFFICIEL</strong> du 17 JUIN 2026.</p>
+      <p style="margin:0 0 12px 0;font-family:Arial, sans-serif;color:#475569;font-size:14px;line-height:1.6;">Nous avons bien pris note de votre absence à l'événement <strong>KASPERKSY QUANTUM SETECT</strong> du 17 JUIN 2026.</p>
       <p style="margin:0 0 12px 0;font-family:Arial, sans-serif;color:#475569;font-size:14px;line-height:1.6;">Nous espérons pouvoir compter sur votre présence lors d'un prochain événement. Merci pour votre retour.</p>
       <p style="margin:0 0 4px 0;font-family:Arial, sans-serif;color:#475569;font-size:14px;line-height:1.6;">N'hésitez pas à nous contacter pour tout renseignement :</p>
       <p style="margin:0;font-family:Arial, sans-serif;"><a href="mailto:marketing@setect.com" style="color:#1E4D72;font-weight:600;text-decoration:none;">marketing@setect.com</a></p>
     `
 
   const subject = isConfirme
-    ? 'SETECT LANCEMENT OFFICIEL — Confirmation de présence'
-    : 'SETECT LANCEMENT OFFICIEL — Réponse enregistrée'
+    ? 'SETECT EVENEMENT — Confirmation de présence'
+    : 'SETECT EVENEMENT — Réponse enregistrée'
 
   const mailOptions: any = {
     from: process.env.SMTP_FROM || '"SETECT Events" <events@setect.cm>',
@@ -167,7 +167,7 @@ export async function sendConfirmationEmail(
     const uid = `setect-event-20260618-${Date.now()}@setect.cm`
     const esc = (s: string) => s.replace(/\\/g, '\\\\').replace(/\n/g, '\\n').replace(/,/g, '\\,').replace(/;/g, '\\;')
     const location = esc('KRYSTAL PALACE, Akwa – Douala')
-    const description = esc("SETECT LANCEMENT OFFICIEL")
+    const description = esc("EVENEMENT KASPERSKY QUANTUM SETECT")
     const ics = [
       'BEGIN:VCALENDAR',
       'VERSION:2.0',
@@ -179,7 +179,7 @@ export async function sendConfirmationEmail(
       'ORGANIZER;CN=SETECT Events:mailto:events@setect.cm',
       'DTSTART:20260618T140000Z',
       'DTEND:20260618T200000Z',
-      'SUMMARY:SETECT LANCEMENT OFFICIEL',
+      'SUMMARY:EVENEMENT KASPERSKY QUANTUM SETECT',
       `LOCATION:${location}`,
       `DESCRIPTION:${description}`,
       'END:VEVENT',
@@ -188,7 +188,7 @@ export async function sendConfirmationEmail(
     ].join('\r\n')
     mailOptions.attachments = [
       {
-        filename: 'SETECT-Lancement.ics',
+        filename: 'SETECT-EVENT.ics',
         content: ics,
         contentType: 'text/calendar; charset=utf-8; method=REQUEST',
       },
