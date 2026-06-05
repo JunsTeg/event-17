@@ -289,13 +289,13 @@ export default function HomePage() {
                 icon: <Coffee size={20} />,
               },
               {
-                time: '9h10',
+                time: '9h00',
                 title: "Mot de bienvenue du CEO",
                 icon: <Mic size={20} />,
               },
               {
-                time: '9h40',
-                title: 'Keynote Kaspersky ',
+                time: '9h10',
+                title: "Réussir sa stratégie de cybersécurité avec l'approche par étape",
                 icon: <Shield size={20} />,
               },
               {
@@ -304,12 +304,12 @@ export default function HomePage() {
                 icon: <Coffee size={20} />,
               },
               {
-                time: '10h20',
-                title: 'Keynote Quantum ',
+                time: '10h30',
+                title: 'Simplifier son architecture de protection des données sans compromis de performance',
                 icon: <Lightbulb size={20} />,
               },
               {
-                time: '11h10',
+                time: '11h20',
                 title: 'Mot de fin du CEO',
                 icon: <Mic size={20} />,
               },
